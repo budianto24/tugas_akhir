@@ -14,12 +14,18 @@
     }
 }
 
+.title-accordion{
+    color: #000 !important;
+    font-size: 17px;
+}
+
+
 /* Ensure that the demo table scrolls */
-    th, td { white-space: nowrap; }
-    div.dataTables_wrapper {
-        width: 100%;
-        margin: 0 auto;
-    }
+th, td { white-space: nowrap; }
+div.dataTables_wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
 
 .checkbox {
     background-color:#fff;

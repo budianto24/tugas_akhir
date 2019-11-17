@@ -27,6 +27,7 @@
 <script src="<?= base_url('assets')?>/adminlte/js/pages/dashboard2.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
+
 		//standard table
 		$('#table1').DataTable();
 

@@ -96,7 +96,7 @@
                 </table>
 
                 <br>
-                <b>Keterangan Gejala</b><br>
+                <b>Keterangan Gejala:</b><br>
                 <?php foreach($gejala as $g):?>
                       Gejala<?= $g['kode_gejala'];?>: <?= $g['gejala'];?><br>
                     <?php endforeach;?>

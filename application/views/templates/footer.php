@@ -12,26 +12,23 @@
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Around the Web</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-facebook-f"></i>
+          <h4 class="text-uppercase mb-4">Sosial Media</h4>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://instagram.com/budianto24">
+            <i class="fab fa-fw fa-instagram"></i>
           </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-twitter"></i>
-          </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
+          <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/budianto24">
             <i class="fab fa-fw fa-linkedin-in"></i>
           </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="#">
-            <i class="fab fa-fw fa-dribbble"></i>
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/budianto24">
+            <i class="fab fa-fw fa-github"></i>
           </a>
         </div>
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
-          <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+          <h4 class="text-uppercase mb-4">Didukung oleh</h4>
+          <img src="<?= base_url('assets/img/logo-unas.png');?>" height="50px" class="mx-2" data-toggle="tooltip" data-placement="bottom" title="Universitas Nasional">
+          <img src="<?= base_url('assets/img/logo-kemenper.png');?>" height="50px" class="mx-2" data-toggle="tooltip" data-placement="bottom" title="Direktorat Jenderal Tanaman Pangan Kementerian Pertanian RI">
         </div>
 
       </div>
@@ -41,7 +38,7 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>Copyright &copy; Your Website 2019</small>
+      <small>Copyright &copy; Budianto - <span class="font-weight-bold">Jagung<img src="<?= base_url('assets/')?>img/logo-corn3.png" height="20px">Ku</span> <?=date('Y');?></small>
     </div>
   </section>
 
@@ -55,6 +52,12 @@
 
   <!-- Custom scripts for this template -->
   <script src="<?= base_url('assets/')?>js/creative.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
 
 </body>
 

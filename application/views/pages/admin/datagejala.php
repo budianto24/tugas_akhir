@@ -40,7 +40,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table class="table" id="table1">
+                <table class="table table-striped table-bordered" id="table1">
                   <thead>
                     <tr>
                       <th>Kode</th>

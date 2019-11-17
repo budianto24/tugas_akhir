@@ -8,7 +8,7 @@
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5">Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!</p>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Pelajari Lebih Lanjut</a>
         </div>
       </div>
     </div>
@@ -18,12 +18,41 @@
   <section class="page-section bg-primary" id="about">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">We've got what you need!</h2>
-          <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
+        <div class="col-md-6 text-center">
+            <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="<?= base_url('assets/img/slide/slide1.jpg');?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="<?= base_url('assets/img/slide/slide2.jpg');?>" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="<?= base_url('assets/img/slide/slide3.jpg');?>" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <small class="text-white-50">(Source pic by Google)</small>
         </div>
+        <div class="col-md-6 text-center">
+          <h2 class="text-white mt-3">Kenapa Jagung!?</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4" style="font-size: 18px; color: #fff !important;">Jagung merupakan tanaman pangan utama ketiga setelah padi dan terigu di dunia dan menempati posisi kedua setelah padi di Indonesia. Tanaman jagung tumbuh baik di daerah panas dan dingin dengan curah hujan dan irigasi yang cukup. Namun selama satu siklus hidupnya dari benih ke benih, setiap bagian jagung  peka terhadap sejumlah penyakit sehingga dapat menurunkan kuantitas dan kualitas hasil. Karena itu masalah penyakit merupakan salah satu faktor pembatas produksi dan mutu benih.</p>
+        </div>
+          <a class="btn btn-light btn-xl js-scroll-trigger mt-4" href="#services">Mulai Konsultasi!</a>
       </div>
     </div>
   </section>
@@ -31,39 +60,40 @@
   <!-- Services Section -->
   <section class="page-section" id="services">
     <div class="container">
-      <h2 class="text-center mt-0">At Your Service</h2>
+          <h2 class="text-center mt-0">Tentang Aplikasi</h2>
       <hr class="divider my-4">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Sturdy Themes</h3>
-            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+      <div class="row justify-content-center">
+        <div class="col-md-10 text-center">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 text-center">
+              <div class="mt-5">
+                <i class="fas fa-2x fa-cogs text-primary mb-3"></i>
+                <h3 class="h5 mb-2">Metode</h3>
+                <p class="text-muted mb-0">Menggunakan metode Naive Bayes dalam mendiagnosa penyakit tanaman jagung</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+              <div class="mt-5">
+                <i class="fas fa-2x fa-info-circle text-primary mb-3"></i>
+                <h3 class="h5 mb-2">Informasi</h3>
+                <p class="text-muted mb-0">Menyediakan informasi berupa data penyakit, penyebab dan penanganan penyakit tanaman jagung</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+              <div class="mt-5">
+                <i class="fas fa-2x fa-comment-medical text-primary mb-3"></i>
+                <h3 class="h5 mb-2">Konsultasi</h3>
+                <p class="text-muted mb-0">Menyediakan layanan sistem konsultasi mengenai gejala-gejala yang dialami pada tanaman jagung</p>
+              </div>
+            </div>
+          </div>
+            <div class="mt-5">
+              <h3 style="font-family: Segoe UI"><span class="font-weight-bold">Jagung<img src="<?= base_url('assets/')?>img/logo-corn3.png" height="40px">Ku</span></h3>
+              <p class="text-muted mb-0">Adalah sebuah aplikasi sistem pakar untuk diagnosa penyakit tanaman jagung berbasis website yang bertujuan untuk membantu para petani jagung dalam mengatasi permasalahan terkait penyakit tanaman jagung.</p>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Up to Date</h3>
-            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Ready to Publish</h3>
-            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-            <h3 class="h4 mb-2">Made with Love</h3>
-            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-          </div>
-        </div>
-      </div>
     </div>
+  </div>
   </section>
 
   <!-- Portfolio Section -->

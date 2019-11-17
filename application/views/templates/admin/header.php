@@ -97,7 +97,13 @@
               <p>Data Latih</p>
             </a>
           </li>
-          <li class="nav-header">USER MANAGEMENT</li>
+          <li class="nav-item">
+            <a href="datapengujian" class="nav-link <?php if($link == 'pengujian'){echo 'active';}?>">
+              <i class="fas fa-book nav-icon"></i>
+              <p>Data Pengujian</p>
+            </a>
+          </li>
+          <li class="nav-header">WEB MANAGEMENT</li>
           <li class="nav-item">
             <a href="https://adminlte.io/docs/3.0" class="nav-link">
               <i class="nav-icon fas fa-file"></i>
