@@ -1,22 +1,45 @@
     <!-- Start Jumbotron -->
-    <div class="jumbotron container-fluid">
-      <div class="container">
-        <h1 class="display-4 jumbotron-title">Aplikasi <b>Sistem Pakar</b> Untuk <br> <b>Diagnosa</b> Penyakit Pada <b>Tanaman Jagung</b></h1>
-      </div>
+    <div class="jumbotron header-content text-white" style="background-attachment: fixed; background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.3) 100%), url(<?= base_url('assets/img/bg-corn.jpg')?>); border-radius: 0;">
+    <div class="container-fluid text-center">
+      <h2 class="display-5">Hasil Diagnosa Gejala</h2>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-4">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
     </div>
+  </div>
     <!-- End Jumbotron -->
 
     <!-- Start Card -->
+    <section class="content mb-5">
     <div class="container">
       <div class="row justify-content-md-center">
-        <div class="col-md-9">
+        <div class="col-md-4 sidebar">
+          <div class="card content">
+            <div class="card-header">
+              <h4>Form Identitas</h4>
+            </div>
+            <div class="card-body">
+                <div class="group mb-4">
+                  <input type="text" name="nama" required value="<?= $this->session->userdata('nama');?>">
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label class="label">Nama</label>
+                </div>
+                <div class="group mb-3">
+                  <input type="email" name="email" required value="<?= $this->session->userdata('email');?>">
+                  <span class="highlight"></span>
+                  <span class="bar"></span>
+                  <label class="label">E-mail</label>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
           <div class="card content">
             <div class="card-header">
               <h4>Form Gejala-Gejala Terkait Penyakit Tanaman Jagung</h4>
             </div>
             <div class="card-body">
-              <p>Nama: <b><?= $this->session->userdata('nama');?></b></p>
-              <p>Email: <b><?= $this->session->userdata('email');?></b></p>
                 <table class="table table-hover mt-4">
                     <?php $i = 1?>
                     <?php foreach ($gejala as $g) :?>
@@ -118,9 +141,11 @@
       }
     ?>
 
-     <div class="row justify-content-md-center mt-4">
-      <div class="col-md-9">
-        <div class="card content">
+     <div class="row justify-content-md-center">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-8">
+        <div class="card content mt-4">
           <div class="card-header">
             <h4>Hasil Diagnosa</h4>
           </div>
@@ -129,12 +154,12 @@
               <?php if($gejala[1]=="Tidak" && $gejala[2]=="Tidak" && $gejala[3]=="Tidak" && $gejala[4]=="Tidak" && $gejala[5]=="Tidak" && $gejala[6]=="Tidak" && $gejala[7]=="Tidak" && $gejala[8]=="Tidak" && $gejala[9]=="Tidak" && $gejala[10]=="Tidak" && $gejala[11]=="Tidak" && $gejala[12]=="Tidak" && $gejala[13]=="Tidak" && $gejala[14]=="Tidak" && $gejala[15]=="Tidak" && $gejala[16]=="Tidak" && $gejala[17]=="Tidak" && $gejala[18]=="Tidak" && $gejala[19]=="Tidak"){ ?>
 
                   <!-- Jika tidak ada -->
-                  <p>Kucing Anda Terdiagnosa Penyakit: <b>Kucing Anda Tidak Terjangkit Penyakit Kulit</b></p>
+                  <p><b>Anda Tidak Memilih Gejala Penyakit Tanaman Jagung</b></p>
               
               <?php }else{?>
 
                   <!-- Jika ada maka tampilkan hasil diagnosanya-->
-                    <p>Kucing Anda Terdiagnosa Penyakit: <b><?= $nama_penyakit;?></b></p>
+                    <p>Tanaman Jagung Anda Terdiagnosa Penyakit: <b><?= $nama_penyakit;?></b></p>
                     <p>Probabilitas: <b><?= $value;?></b></p>
 
                     <p>List Nilai Probabilitas:<br>
@@ -155,21 +180,21 @@
                       echo "Busuk Pelepah: ".substr(round($total4, 2), 0, 5)."%<br>";
                       echo "Gosong: ".substr(round($total5, 2), 0, 5)."%<br>";
 
-                      echo "<br>";
+                      // echo "<br>";
 
-                      echo "Bulai: ".$HA."<br>";
-                      echo "Hawar Daun: ".$HB."<br>";
-                      echo "Karat Daun: ".$HC."<br>";
-                      echo "Busuk Pelepah: ".$HD."<br>";
-                      echo "Gosong: ".$HE."<br>";
+                      // echo "Bulai: ".$HA."<br>";
+                      // echo "Hawar Daun: ".$HB."<br>";
+                      // echo "Karat Daun: ".$HC."<br>";
+                      // echo "Busuk Pelepah: ".$HD."<br>";
+                      // echo "Gosong: ".$HE."<br>";
 
-                      echo "<br>";
+                      // echo "<br>";
 
-                      echo $HQ."<br>";
-                      echo $HW."<br>";
-                      echo $HR."<br>";
-                      echo $HT."<br>";
-                      echo $HY."<br>";
+                      // echo $HQ."<br>";
+                      // echo $HW."<br>";
+                      // echo $HR."<br>";
+                      // echo $HT."<br>";
+                      // echo $HY."<br>";
 
                     ?>
                     </p>
@@ -192,4 +217,5 @@
       </div>
     </div>
   </div>
+</section>
   <!-- End Card -->   

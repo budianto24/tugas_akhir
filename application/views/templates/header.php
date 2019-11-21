@@ -22,6 +22,7 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="<?= base_url('assets/')?>css/creative.css" rel="stylesheet">
+  <link href="<?= base_url('assets/')?>css/style.css" rel="stylesheet">
 
 </head>
 
@@ -37,16 +38,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto my-2 my-lg-0">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Tentang</a>
+            <a class="nav-link js-scroll-trigger" href="#pengantar">Pengantar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Pelayan</a>
+            <a class="nav-link js-scroll-trigger" href="#tentang">Tentang</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">Konsultasi</a>
+            <a class="nav-link js-scroll-trigger" href="#konsultasi">Konsultasi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link js-scroll-trigger" href="#penyakit">Penyakit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#kontak">Kontak</a>
           </li>
         </ul>
       </div>

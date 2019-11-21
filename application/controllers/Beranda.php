@@ -7,29 +7,41 @@ class Beranda extends CI_Controller {
     {
         $data['title'] = "Sistem Pakar Penyakit Tanaman Jagung";
 
-        $data['gejala'] = $this->db->get('tb_gejala')->result_array();
+        $data['penyakit'] = $this->db->get('tb_penyakit')->result_array();
 
         $this->load->view('templates/header', $data);
         $this->load->view('pages/home', $data);
         $this->load->view('templates/footer');
     }
 
-   public function result()
-   {
-		$data['judul'] = "Diagnosa";
+    public function konsultasi()
+    {
+    	$data['title'] = "Konsultasi";
 
 		$data['gejala'] = $this->db->get('tb_gejala')->result_array();
 		$data['penyakit'] = $this->db->get('tb_penyakit')->result_array();
 		
-		$this->load->view('templates/header', $data);
+		$this->load->view('templates/form/header', $data);
+		$this->load->view('pages/konsultasi',$data);
+		$this->load->view('templates/form/footer');
+   }
+
+   public function result()
+   {
+		$data['title'] = "Hasil Diagnosa";
+
+		$data['gejala'] = $this->db->get('tb_gejala')->result_array();
+		$data['penyakit'] = $this->db->get('tb_penyakit')->result_array();
+		
+		$this->load->view('templates/form/header', $data);;
 		$this->load->view('pages/diagnosa',$data);
-		$this->load->view('templates/footer');
+		$this->load->view('templates/form/footer');
    }
 
    public function diagnosa()
    {	
 
-   		$verify = $this->input->post('verify');
+   		$verify = "test";
 
    		$nama 	= $this->input->post('nama');
 
@@ -77,9 +89,9 @@ class Beranda extends CI_Controller {
 	   		$this->session->set_userdata($dataGejala);
 
 	   		// $this->db->insert('tb_pengujian', $dataGejala);
-	   		redirect('home/result');
+	   		redirect('result');
    		}else{
-   			redirect('home');
+   			redirect('beranda');
    		}
    }
 
