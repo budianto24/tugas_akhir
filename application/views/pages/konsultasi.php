@@ -1,9 +1,6 @@
   <div class="jumbotron header-content text-white" style="background-attachment: fixed; background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.3) 100%), url(<?= base_url('assets/img/bg-corn.jpg')?>); border-radius: 0;">
     <div class="container-fluid text-center">
-      <h2 class="display-5">Konsultasi Penyakit Tanaman Jagung</h2>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <h2 class="display-4">Konsultasi Penyakit Tanaman Jagung</h2>
     </div>
   </div>
  <!-- Start Card -->
@@ -12,8 +9,8 @@
         <?= form_open('beranda/diagnosa');?>
         <div class="row justify-content-md-center">
         <div class="col-md-4 sidebar">
-          <div class="card content">
-            <div class="card-header">
+          <div class="card">
+            <div class="card-header bg-card-header">
               <h4>Form Identitas</h4>
             </div>
             <div class="card-body">
@@ -34,8 +31,8 @@
         </div>
 
         <div class="col-md-8">
-          <div class="card content">
-            <div class="card-header">
+          <div class="card">
+            <div class="card-header bg-card-header">
               <h4>Form Gejala-Gejala Terkait Penyakit Tanaman Jagung</h4>
             </div>
             <div class="card-body">
@@ -64,9 +61,9 @@
                     <?php endforeach;?>
                 </table>
 
-                <a href="<?= base_url();?>" class="btn btn-primary mt-5">Kembali</a>
+                <a href="<?= base_url();?>" class="btn btn-primary mt-5"><span class="fas fa-home"></span> Kembali</a>
                 <div class="float-right">
-                  <button class="btn btn-primary mt-5">Selanjutnya</button>
+                  <button class="btn btn-primary mt-5">Selanjutnya <span class="fas fa-arrow-right"></span></button>
                 </div>
             </div>
           </div>

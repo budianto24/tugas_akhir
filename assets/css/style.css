@@ -25,9 +25,9 @@
 }
 input               {
   font-size:18px;
-  padding:10px 10px 10px 5px;
+  padding:10px 10px 5px 5px;
   display:block;
-  width:300px;
+  width:100%;
   border:none;
   border-bottom:1px solid #ffc425;
 }
@@ -82,7 +82,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
-  height:60%; 
+  height:100%; 
   width:100px; 
   top:25%; 
   left:0;
@@ -181,10 +181,10 @@ input:focus ~ .highlight {
 }
 
 .content{
-  margin-top: -50px;
+  margin-top: -100px;
 }
 
-.card-header{
+.bg-card-header{
   background-color: #ffc425;
   color: #fff;
   padding-bottom: 0px;

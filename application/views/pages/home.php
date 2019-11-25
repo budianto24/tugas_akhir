@@ -63,6 +63,14 @@
       <h2 class="text-center mt-0">Tentang Aplikasi</h2>
       <hr class="divider my-4">
       <div class="row justify-content-center">
+        <div class="col-md-7 text-center">
+          <div class="mt-3">
+            <h3 style="font-family: Segoe UI"><span class="font-weight-bold">Jagung<img src="<?= base_url('assets/')?>img/logo-corn3.png" height="40px">Ku</span></h3>
+            <p class="text-muted mb-0">Adalah sebuah aplikasi sistem pakar untuk diagnosa penyakit tanaman jagung berbasis website yang bertujuan untuk membantu para petani jagung dalam mengatasi permasalahan terkait penyakit tanaman jagung.</p>
+        </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
         <div class="col-md-10 text-center">
           <div class="row">
             <div class="col-lg-4 col-md-6 text-center">
@@ -88,14 +96,6 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-md-7 text-center">
-            <div class="mt-5">
-              <h3 style="font-family: Segoe UI"><span class="font-weight-bold">Jagung<img src="<?= base_url('assets/')?>img/logo-corn3.png" height="40px">Ku</span></h3>
-              <p class="text-muted mb-0">Adalah sebuah aplikasi sistem pakar untuk diagnosa penyakit tanaman jagung berbasis website yang bertujuan untuk membantu para petani jagung dalam mengatasi permasalahan terkait penyakit tanaman jagung.</p>
-          </div>
-          </div>
-        </div>
     </div>
   </div>
   </section>
@@ -117,7 +117,7 @@
         <div class="col-lg-4 mr-auto text-center">
           <div class="card">
             <div class="card-body">
-              <?= form_open('konsultasi');?>
+              <?= form_open();?>
               <h4>Form Konsultasi</h4>
                <div class="group mb-4">
                   <input type="text" name="nama" required>

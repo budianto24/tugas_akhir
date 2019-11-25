@@ -1,4 +1,4 @@
- <!-- Footer -->
+    <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">
       <div class="row">
@@ -13,13 +13,13 @@
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Sosial Media</h4>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://instagram.com/budianto24" target="_blank">
+          <a class="btn btn-outline-light btn-social mx-1" href="https://instagram.com/budianto24">
             <i class="fab fa-fw fa-instagram"></i>
           </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/budianto24" target="_blank">
+          <a class="btn btn-outline-light btn-social mx-1" href="https://linkedin.com/budianto24">
             <i class="fab fa-fw fa-linkedin-in"></i>
           </a>
-          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/budianto24" target="_blank">
+          <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/budianto24">
             <i class="fab fa-fw fa-github"></i>
           </a>
         </div>
@@ -61,7 +61,7 @@
 
     $(document).ready(function() {
                 $('.sidebar').theiaStickySidebar({
-                  additionalMarginTop: 10
+                  additionalMarginTop: 80
                 });
             });
   </script>
