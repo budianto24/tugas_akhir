@@ -51,6 +51,7 @@
     </div>
     <!-- /.login-card-body -->
   </div>
+  <a href="<?= base_url();?>"><i class="fas fa-arrow-left"></i> Kembali ke beranda</a>
 </div>
 <!-- /.login-box -->
 

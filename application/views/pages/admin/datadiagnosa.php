@@ -27,7 +27,7 @@
             <!-- MAP & BOX PANE -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Tabel Data Latih</h3>
+                <h3 class="card-title">Tabel Data Diagnosa</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -40,31 +40,11 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive">
-                <?= $this->session->flashdata('flash');?>
-                <div class="row">
-                <div class="col-md-4">
-                  <form method="get" action="">
-                  <div class="form-group">
-                    <select class="form-control" id="datalatih" name="p" onchange="this.form.submit();">
-                      <option value="">--Pilihan--</option>
-                      <?php foreach($penyakit as $p): ?>
-                      <option value="<?= $p['nama_penyakit']?>" <?php if ($this->input->get('p') == $p['nama_penyakit']){echo "selected";}?>>Penyakit <?= $p['nama_penyakit']?></option>
-                      <?php endforeach;?>
-                    </select>
-                  </div>
-                  </form>
-              </div>
-              <div class="col-md-8">
-                <div class="float-right">
-                    <a href="<?= base_url('admin/datalatih/add');?>" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Datalatih</a>
-                  </div>
-              </div>
-            </div>
-
-                <table class="table table-striped table-bordered" id="table3">
+                <table class="table table-striped table-bordered" id="table2">
                   <thead>
                     <tr>
                       <th>No</th>
+                      <th>Nama</th>
                       <th>G1</th>
                       <th>G2</th>
                       <th>G3</th>
@@ -84,18 +64,19 @@
                       <th>G17</th>
                       <th>G18</th>
                       <th>G19</th>
-                      <th>Action</th>
+                      <th>Penyakit</th>
                     </tr>
                   </thead>
                   <tbody>
                     <?php $i = 1;?>
-                    <?php foreach($datalatih as $k):?>
+                    <?php foreach($diagnosa as $d):?>
                       <tr>
                         <td class="text-center"><?= $i++;?></td>
-                        <?php for($p=1; $p < count($gejala)+1; $p++) :?>
-                        <td><?= $k['G'.$p];?></td>
+                        <td><?= $d['nama']?></td>
+                        <?php for($p=1; $p < 20; $p++) :?>
+                        <td><?= $d['G'.$p];?></td>
                         <?php endfor;?>
-                        <td class="text-center"><a href="<?= base_url('admin/datalatih/delete/').$k['id_datalatih'];?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin hapus data ini?')"><span class="fas fa-trash"></span> Hapus</a></td>
+                        <td><?= $d['nama_penyakit'];?></td>
                       </tr>
                     <?php endforeach;?>
                   </tbody>

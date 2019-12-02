@@ -27,7 +27,7 @@
             <!-- MAP & BOX PANE -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Tabel Data Gejala</h3>
+                <h3 class="card-title">Form Tambah Data Latih</h3>
 
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -39,29 +39,53 @@
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body">
-                <table class="table table-striped table-bordered" id="table1">
+              <div class="card-body table-responsive">
+                <?= form_open();?>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label>Penyakit</label>
+                      <select class="form-control" name="penyakit">
+                        <option value="">--Pilihan--</option>
+                        <?php foreach($penyakit as $p): ?>
+                        <option value="<?= $p['nama_penyakit']?>">Penyakit <?= $p['nama_penyakit']?></option>
+                        <?php endforeach;?>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-hover table-striped table-bordered mt-2">
                   <thead>
                     <tr>
                       <th>No</th>
                       <th>Gejala</th>
-                      <th>Kode</th>
-                      <th>Action</th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
-                    <?php $i = 1;?>
-                    <?php foreach($gejala as $g):?>
+                    <?php $i = 1?>
+                    <?php foreach ($gejala as $g) :?>
                     <tr>
-                      <td><?= $i;?></td>
-                      <td><?= $g['gejala']?></td>
-                      <td class="text-center">G<?= $g['kode_gejala']?></td>
-                      <td></td>
+                        <td><?= $i;?></td>
+                        <td>
+                            <label for="checkbox<?= $i;?>">
+                                <?= $g['gejala']?>
+                            </label>
+                        </td>
+                        <td>
+                            <label class="checkbox">
+                                <input type="checkbox" id="checkbox<?= $i;?>" name="gejala<?= $i;?>" value="Y" />
+                                <span class="default"></span>
+                            </label>
+                        </td>
                     </tr>
-                    <?php $i++;?>
+                    <?php $i++?>
                     <?php endforeach;?>
                   </tbody>
                 </table>
+
+                <button class="btn btn-primary mt-4 float-right">Konfirmasi</button>
+                <?= form_close();?>
               </div>
               <!-- /.card-body -->
             </div>

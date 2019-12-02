@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="shortcut icon" href="<?= base_url()?>assets/img/logo-corn.png">
 
   <title><?= $title;?></title>
 
@@ -20,6 +21,9 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <!-- Custom Style -->
   <link rel="stylesheet" href="<?= base_url('assets')?>/css/style.css">
+
+  <!-- High Chart -->
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
 <div class="wrapper">
@@ -36,7 +40,7 @@
     <ul class="navbar-nav ml-auto">
       <!-- Messages Dropdown Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="#"><i
+        <a class="nav-link" href="<?= base_url('logout');?>"><i
             class="fas fa-sign-out-alt"></i> Logout</a>
       </li>
     </ul>
@@ -56,10 +60,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="<?= base_url('assets')?>/adminlte/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="<?= base_url('assets')?>/img/<?= $user['image']?>" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block"><?= $user['nama'];?></a>
         </div>
       </div>
 
@@ -71,7 +75,7 @@
 
                <?php $link = $this->uri->segment(2);?>
           <li class="nav-item">
-            <a href="dashboard" class="nav-link <?php if($link == 'dashboard'){echo 'active';}?>">
+            <a href="<?= base_url('admin/dashboard');?>" class="nav-link <?php if($link == 'dashboard'){echo 'active';}?>">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -80,34 +84,27 @@
           </li>
           <li class="nav-header">DATA-DATA</li>
           <li class="nav-item">
-            <a href="penyakit" class="nav-link <?php if($link == 'penyakit'){echo 'active';}?>">
+            <a href="<?= base_url('admin/penyakit');?>" class="nav-link <?php if($link == 'penyakit'){echo 'active';}?>">
               <i class="fas fa-bug nav-icon"></i>
               <p>Data Penyakit</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="gejala" class="nav-link <?php if($link == 'gejala'){echo 'active';}?>">
+            <a href="<?= base_url('admin/gejala');?>" class="nav-link <?php if($link == 'gejala'){echo 'active';}?>">
               <i class="fas fa-clipboard-list nav-icon"></i>
               <p>Data Gejala</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="datalatih" class="nav-link <?php if($link == 'datalatih'){echo 'active';}?>">
+            <a href="<?= base_url('admin/datalatih');?>" class="nav-link <?php if($link == 'datalatih'){echo 'active';}?>">
               <i class="fas fa-book nav-icon"></i>
               <p>Data Latih</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="datapengujian" class="nav-link <?php if($link == 'pengujian'){echo 'active';}?>">
-              <i class="fas fa-book nav-icon"></i>
-              <p>Data Pengujian</p>
-            </a>
-          </li>
-          <li class="nav-header">WEB MANAGEMENT</li>
-          <li class="nav-item">
-            <a href="https://adminlte.io/docs/3.0" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>Documentation</p>
+            <a href="<?= base_url('admin/diagnosa');?>" class="nav-link <?php if($link == 'diagnosa'){echo 'active';}?>">
+              <i class="fas fa-users nav-icon"></i>
+              <p>Data Diagnosa</p>
             </a>
           </li>
         </ul>

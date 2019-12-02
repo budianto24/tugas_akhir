@@ -40,28 +40,22 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive">
-                <?= $this->session->flashdata('flash');?>
                 <div class="row">
                 <div class="col-md-4">
-                  <form method="get" action="">
+                  <?= form_open();?>
                   <div class="form-group">
-                    <select class="form-control" id="datalatih" name="p" onchange="this.form.submit();">
+                    <select class="form-control" id="datalatih" name="pilihan" onchange="this.form.submit();">
                       <option value="">--Pilihan--</option>
                       <?php foreach($penyakit as $p): ?>
-                      <option value="<?= $p['nama_penyakit']?>" <?php if ($this->input->get('p') == $p['nama_penyakit']){echo "selected";}?>>Penyakit <?= $p['nama_penyakit']?></option>
+                      <option value="<?= $p['nama_penyakit']?>" <?php if ($this->input->post('pilihan') == $p['nama_penyakit']){echo "selected";}?>>Penyakit <?= $p['nama_penyakit']?></option>
                       <?php endforeach;?>
                     </select>
                   </div>
-                  </form>
-              </div>
-              <div class="col-md-8">
-                <div class="float-right">
-                    <a href="<?= base_url('admin/datalatih/add');?>" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Datalatih</a>
-                  </div>
+                  <?= form_close();?>
               </div>
             </div>
 
-                <table class="table table-striped table-bordered" id="table3">
+                <table class="table table-striped table-bordered" id="table2">
                   <thead>
                     <tr>
                       <th>No</th>
@@ -95,7 +89,7 @@
                         <?php for($p=1; $p < count($gejala)+1; $p++) :?>
                         <td><?= $k['G'.$p];?></td>
                         <?php endfor;?>
-                        <td class="text-center"><a href="<?= base_url('admin/datalatih/delete/').$k['id_datalatih'];?>" class="btn btn-danger btn-xs" onclick="return confirm('Yakin hapus data ini?')"><span class="fas fa-trash"></span> Hapus</a></td>
+                        <td class="text-center"><button class="btn btn-warning btn-sm"><span class="fas fa-edit"></span> Edit</button></td>
                       </tr>
                     <?php endforeach;?>
                   </tbody>
@@ -104,7 +98,7 @@
                 <br>
                 <b>Keterangan Gejala:</b><br>
                 <?php foreach($gejala as $g):?>
-                      G<?= $g['kode_gejala'];?>: <?= $g['gejala'];?><br>
+                      Gejala<?= $g['kode_gejala'];?>: <?= $g['gejala'];?><br>
                     <?php endforeach;?>
               </div>
               <!-- /.card-body -->

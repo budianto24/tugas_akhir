@@ -3,7 +3,7 @@
 	//Ini buat mencari jumlah sesuai jawaban per kategori penyakit
 	function getKK($data, $kat, $kolom)
 	{
-		$ci = get_instance();
+		$ci =& get_instance();
 		$jum = $ci->db->query("SELECT kategori FROM tb_datalatih WHERE $kolom = '$data' AND kategori = '$kat'")->num_rows();
 
 		return $jum;
@@ -12,7 +12,7 @@
 	//Ini buat mencari jumlah datalatih per kategori penyakit
 	function getOut($kat)
 	{
-		$ci = get_instance();
+		$ci =& get_instance();
 		$jum = $ci->db->query("SELECT `kategori` FROM `tb_datalatih` WHERE `kategori` = '$kat'")->num_rows();
 
 		return $jum;
@@ -21,10 +21,11 @@
 	//Ini untuk menyimpan data result dari diagnosa
 	function saveResult()
 	{
-		$ci = get_instance();
+		$ci =& get_instance();
 
 		$dataResult = [
 				'date_created' => time(),
+				'date'	=> date('Y-m-d'),
 				'nama'    => $ci->session->userdata('nama'),
 				'email'   => $ci->session->userdata('email'),
 				'G1' => $ci->session->userdata('G1'),
@@ -55,4 +56,14 @@
 		    ];
 
 		$ci->db->insert('tb_pengujian', $dataResult);
+	}
+
+
+	function user()
+	{
+		$ci =& get_instance();
+
+		$id = $ci->session->userdata('id');
+		
+		return $ci->db->get_where('tb_user', ['id' => $id])->row_array();
 	}

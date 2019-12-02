@@ -36,6 +36,18 @@
 	        scrollY:        true,
 	        scrollX:        true,
 	        scrollCollapse: true,
+	        paging:         true,
+	        filter: true,
+	        fixedColumns:   {
+	            leftColumns: 2,
+	            rightColumns: 1
+	        }
+	    } );
+
+	    $('#table3').DataTable( {
+	        scrollY:        true,
+	        scrollX:        true,
+	        scrollCollapse: true,
 	        paging:         false,
 	        filter: false,
 	        fixedColumns:   {

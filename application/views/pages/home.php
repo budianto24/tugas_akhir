@@ -232,16 +232,23 @@
             <div class="col-md-4">
               <h5>Profil Pengembang Aplikasi</h5>
               <a href="https://budianto24.github.io" target="_blank" class="text-muted">
-                <img src="<?= base_url('assets/img/PP.png');?>" height="115px;" class="rounded-circle">
+                <img src="<?= base_url('assets/img/default.png');?>" height="115px;" class="rounded-circle">
                 <h5>Budianto</h5>
-                <p>Sistem Informasi<br>Fakultas Teknologi Komunikasi dan Informatika<br>Universitas Nasional</p>
               </a>
+                <p>Sistem Informasi<br>Fakultas Teknologi Komunikasi dan Informatika<br>Universitas Nasional</p>
             </div>
             <div class="col-lg-6 text-center">
               <p class="text-muted mb-5">Jika ada yang ingin disampaikan bisa hubungi saya melalui kontak dibawah ini, Terimakasih telah berkunjung di website ini..</p>
-              <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-              <!-- Make sure to change the email address in anchor text AND the link below! -->
-              <a class="d-block text-muted" href="mailto:budiianto24@gmail.com">budiianto24@gmail.com</a>
+              <div class="row justify-content-center">
+                <div class="col-sm-4">
+                  <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                  <a class="d-block text-muted" href="mailto:budiianto24@gmail.com">budiianto24@gmail.com</a>
+                </div>
+                <div class="col-sm-4">
+                  <i class="fas fa-globe fa-3x mb-3 text-muted"></i>
+                  <a class="d-block text-muted" href="https://budianto24.github.io">budianto24.github.io</a>
+                </div>
+              </div>
             </div>
           </div>
       </div>

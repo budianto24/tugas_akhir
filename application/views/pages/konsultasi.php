@@ -1,17 +1,17 @@
   <div class="jumbotron header-content text-white" style="background-attachment: fixed; background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.3) 100%), url(<?= base_url('assets/img/bg-corn.jpg')?>); border-radius: 0;">
     <div class="container-fluid text-center">
-      <h2 class="display-4">Konsultasi Penyakit Tanaman Jagung</h2>
+      <h2>Konsultasi Penyakit Tanaman Jagung</h2>
     </div>
   </div>
  <!-- Start Card -->
-  <section class="content mb-5">
+  <section class="content-card mb-5">
     <div class="container">
         <?= form_open('beranda/diagnosa');?>
         <div class="row justify-content-md-center">
         <div class="col-md-4 sidebar">
           <div class="card">
             <div class="card-header bg-card-header">
-              <h4>Form Identitas</h4>
+              <h5>Form Identitas</h5>
             </div>
             <div class="card-body">
                 <div class="group mb-4">
@@ -33,7 +33,7 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-header bg-card-header">
-              <h4>Form Gejala-Gejala Terkait Penyakit Tanaman Jagung</h4>
+              <h5>Form Gejala-Gejala Terkait Penyakit Tanaman Jagung</h5>
             </div>
             <div class="card-body">
               

@@ -40,16 +40,15 @@ class Beranda extends CI_Controller {
     }
 
     public function konsultasi()
-    {
-        
-	    	$data['title'] = "Konsultasi";
+    {     	
+    	$data['title'] = "Konsultasi";
 
-			$data['gejala'] = $this->db->get('tb_gejala')->result_array();
-			$data['penyakit'] = $this->db->get('tb_penyakit')->result_array();
-			
-			$this->load->view('templates/form/header', $data);
-			$this->load->view('pages/konsultasi',$data);
-			$this->load->view('templates/footer');
+		$data['gejala'] = $this->db->get('tb_gejala')->result_array();
+		$data['penyakit'] = $this->db->get('tb_penyakit')->result_array();
+		
+		$this->load->view('templates/form/header', $data);
+		$this->load->view('pages/konsultasi',$data);
+		$this->load->view('templates/footer');
    }
 
    public function result()
@@ -60,7 +59,7 @@ class Beranda extends CI_Controller {
 		$kode_penyakit = $this->session->userdata('kode_penyakit');
 
 		$data['gejala'] = $this->db->get('tb_gejala')->result_array();
-		$data['result'] = $this->db->get_where('tb_penyakit', ['kode_penyakit' => $kode_penyakit])->result_array();
+		$data['result'] = $this->db->get_where('tb_penyakit', ['kode_penyakit' => $kode_penyakit])->row_array();
 		
 		$this->load->view('templates/form/header', $data);;
 		$this->load->view('pages/diagnosa',$data);
@@ -76,6 +75,16 @@ class Beranda extends CI_Controller {
    		$gejala = $this->db->get('tb_gejala')->result_array();
 
    		$verify = "test";
+
+   		$nama 	= $this->input->post('nama');
+   		$email 	= $this->input->post('email');
+
+   		$dataSession =[
+   			'nama'	=> $nama,
+   			'email'	=>	$email
+   		];
+
+   		$this->session->set_userdata($dataSession);
 
 
    		for ($i=1; $i <= 19; $i++) { 
@@ -186,6 +195,23 @@ class Beranda extends CI_Controller {
    		}else{
    			redirect('beranda');
    		}
+   }
+
+
+   public function cetak()
+   {
+    $this->load->library('pdf');
+
+    $nama = $this->session->userdata('nama');
+
+    $kode_penyakit = $this->session->userdata('kode_penyakit');
+
+	$data['gejala'] = $this->db->get('tb_gejala')->result_array();
+	$data['result'] = $this->db->get_where('tb_penyakit', ['kode_penyakit' => $kode_penyakit])->row_array();
+
+    $this->pdf->setPaper('A4', 'potrait');
+    $this->pdf->filename = "Hasil Diagnosa Penyakit Tanaman Jagung - ".$nama.".pdf";
+    $this->pdf->load_view('pdf/cetak_hasil', $data);
    }
 
 

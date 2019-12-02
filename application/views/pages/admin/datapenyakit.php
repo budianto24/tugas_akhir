@@ -69,11 +69,14 @@
 				        		<b>Deskripsi:</b><br>
 				        		<?= $p['deskripsi'];?>
 				        		<br><br>
-				        		<b>Penyebab:</b><br>
-				        		<?= $p['penyebab'];?>
+                    <b>Siklus Penyakit:</b><br>
+                    <?= $p['siklus'];?>
+                    <br><br>
+				        		<b>Epidemiologi:</b><br>
+				        		<?= $p['epidemiologi'];?>
 				        		<br><br>
 				        		<b>Pengendalian:</b><br>
-				        		<?= $p['solusi'];?>
+				        		<?= $p['pengendalian'];?>
 				        	</div>
 				        </div>
 				      </div>

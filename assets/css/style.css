@@ -180,7 +180,7 @@ input:focus ~ .highlight {
   padding-bottom: 150px;
 }
 
-.content{
+.content-card{
   margin-top: -100px;
 }
 
@@ -188,4 +188,10 @@ input:focus ~ .highlight {
   background-color: #ffc425;
   color: #fff;
   padding-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .sidebar{
+    margin-bottom: 25px;
+  }
 }

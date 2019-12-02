@@ -56,3 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 // Custom Route
 $route['konsultasi'] = 'beranda/konsultasi';
 $route['result'] = 'beranda/result';
+$route['cetak'] = 'beranda/cetak';
+$route['logout'] = 'auth/logout';

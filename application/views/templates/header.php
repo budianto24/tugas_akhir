@@ -5,8 +5,9 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="Sistem Pakar Untuk Diagnosa Penyakit Tanaman Jagung Menggunakan Metode Naive Bayes Berbasis Website">
+  <meta name="author" content="Budianto">
+  <link rel="shortcut icon" href="<?= base_url()?>assets/img/logo-corn.png">
 
   <title><?= $title?></title>
 

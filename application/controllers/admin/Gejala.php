@@ -7,11 +7,17 @@ class Gejala extends CI_Controller {
 	{
 		parent::__construct();
 		
+		if (!$this->session->userdata('id')) {
+			redirect('auth');
+		}
+
 		$this->load->model('M_gejala');
 	}
 
 	public function index()
 	{
+		$data['user'] = user();
+		
 		$data['title'] = "Data Gejala";
 		
 		$data['gejala'] = $this->M_gejala->getAllData();

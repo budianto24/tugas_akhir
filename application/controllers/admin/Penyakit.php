@@ -7,11 +7,17 @@ class Penyakit extends CI_Controller {
 	{
 		parent::__construct();
 		
+		if (!$this->session->userdata('id')) {
+			redirect('auth');
+		}
+
 		$this->load->model('M_penyakit');
 	}
 
 	public function index()
 	{
+		$data['user'] = user();
+		
 		$data['title'] = "Data Penyakit";
 		
 		$data['penyakit'] = $this->M_penyakit->getAllData();
